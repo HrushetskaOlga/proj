@@ -1,0 +1,18 @@
+
+<input type="text" id="filter" [(ngModel)]="term" placeholder="search">
+ <div class="box" *ngFor="let categoria of categorias" id="filter2" (click)="pushValue(categoria)"><button  class="btn filterCategorias">{{categoria}}</button>
+ </div>
+<div class="card-columns"  >
+  <div class="card" *ngFor="let product of products1 | filter: term | filter2: term2 ;let i = index">
+    <img class="card-img-top" src={{product.url}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">Price: {{product.price}}$</p>
+      <p class="card-text">Tara: {{product.tara}}</p>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-primary" (click)="addCart(product)" >More</a>
+      <a class="btn btn-primary" (click)="addShoppingCart(product)" >Add to Cart</a>
+    </div>
+  </div>
+</div>

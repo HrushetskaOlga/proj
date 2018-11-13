@@ -1,0 +1,10 @@
+.card{
+  width: 180%;
+}
+.card-columns{
+  margin-top: 20px;
+}
+.btn{
+  background-color: coral;
+  border:none;
+}

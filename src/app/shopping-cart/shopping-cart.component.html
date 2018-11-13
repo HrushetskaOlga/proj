@@ -1,0 +1,10 @@
+<ul *ngFor="let product of products1; let i = index" >
+  <li><span class="img"><img class="card-img-top" src={{product?.url}} alt="Card image cap"></span>
+    <p>{{product?.title}}</p> <p>{{product?.price}}$</p>
+    <button class="btn btn-danger" (click)="deleteFirebace(product.key)">Delete</button></li>
+</ul>
+<div class="total">
+  <span>Total price </span>
+  <span>{{sumPrice}}$</span>
+</div>
+

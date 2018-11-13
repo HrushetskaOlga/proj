@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-8 m-auto">
+    <input type="file" (change)="onAddProduct($event)">
+    <img *ngFor="let img of images" [src]="img.url" alt="photo">
+    <button (click)="uploadImage()">upload to firebase</button>
+    <form #form1="ngForm">
+      <div class="form-group">
+        <label for="title">title</label>
+        <input class="form-control" type="text" id="title" name="title" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="text">text</label>
+        <input class="form-control" type="text" id="text" name="text" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="price">price</label>
+        <input class="form-control" type="text" id="price" name="price" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="tara">tara</label>
+        <input class="form-control" type="text" id="tara" name="tara" ngModel>
+      </div>
+
+      <button class="btn badge-primary ml-2" (click)="OnAddTextProduct(form1)" [disabled]="!form1.valid" >Add text product</button>
+    </form>
+  </div>
+</div>
+
+<ul>
+<li *ngFor="let product of products1; let i = index">
+  <span class="product">{{product.title}}</span>
+  <span class="product">{{product.text}}</span>
+</li>
+</ul>
+

@@ -1,0 +1,36 @@
+.card{
+  margin: 5px;
+  width: 300px;
+}
+.card-img-top{
+  width: 270px;
+  height: 400px;
+}
+
+#filter{
+  width: 100%;
+  height: 30px;
+  margin: 10px;
+}
+.container{
+  display: flex;
+}
+.filter{
+  width: 300px;
+}
+
+.card-footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn{
+  width: 120px;
+  background-color: coral;
+  border: none;
+}
+
+
+.filterCategorias{
+  margin: 10px;
+}
